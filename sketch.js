@@ -14,9 +14,6 @@ function setup() {
   noseColor = 0;
   createCanvas(400, 400);
   bg = new Background(10);
-  createButton("Start").mousePressed();
-
-
   drawHead();
   drawEyes();
   drawPupils(1);
