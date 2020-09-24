@@ -8,7 +8,7 @@ let randoms = [];
 function setup() {
   x = 1;
   changeDirection = false;
-  createButton("Start").mousePressed(startSketch);
+  createButton("Start").mousePressed(startSketch());
   mic = new p5.AudioIn()
   mic.start();
   noseColor = 0;
