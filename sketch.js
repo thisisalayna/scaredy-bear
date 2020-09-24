@@ -4,11 +4,12 @@ let reSize;
 let noseColor = 0;
 let bg;
 let randoms = [];
+let sketchStarted  = false;
 
 function setup() {
   x = 1;
   changeDirection = false;
-  createButton("Start").mousePressed(startSketch());
+  createButton("Start").mousePressed();
   mic = new p5.AudioIn()
   mic.start();
   noseColor = 0;
