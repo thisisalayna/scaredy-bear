@@ -40,7 +40,7 @@ mic.start();
 
 function draw() {
 
-  if (sketchStarted) {
+  if (sketchStarted = true;) {
 background(165, 207, 201);
 
   drawShadow();
@@ -78,6 +78,7 @@ background(165, 207, 201);
   translate(p5.Vector.fromAngle(radians(micLevel * 1000), 2));
   drawTongue();
   pop();
+
   }
 
 
