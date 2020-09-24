@@ -15,9 +15,8 @@ function setup() {
   createCanvas(400, 400);
   bg = new Background(10);
   createButton("Start").mousePressed();
-  mic = new p5.AudioIn()
-  mic.start();
-  
+
+
   drawHead();
   drawEyes();
   drawPupils(1);
@@ -32,13 +31,25 @@ function setup() {
     random[i] = x;
     random[i++] = y;
   }
-  //drawBack();
+startSketch();
 
+}
+function startSketch(){
+  createButton("Start").mousePressed();
+  mic = new p5.AudioIn()
+  mic.start();
+
+  sketchStarted = true;
 }
 
 function draw() {
 
  background(165, 207, 201);
+
+if(sketchStarted){
+
+
+}
 
 drawShadow();
 
