@@ -32,20 +32,16 @@ function setup() {
 }
 
 function startSketch(){
-console.log('start sketch!');
-
+mic = new p5.AudioIn();
+mic.start();
 }
 
 
 
 function draw() {
 
-  background(165, 207, 201);
-
   if (sketchStarted) {
-
-
-  }
+background(165, 207, 201);
 
   drawShadow();
 
@@ -82,6 +78,8 @@ function draw() {
   translate(p5.Vector.fromAngle(radians(micLevel * 1000), 2));
   drawTongue();
   pop();
+  }
+
 
 
 }
