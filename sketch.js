@@ -7,7 +7,6 @@ let bg;
 let randoms = [];
 
 function setup() {
-  
   x = 1;
   changeDirection = false;
   mic = new p5.AudioIn()
@@ -15,6 +14,10 @@ function setup() {
   noseColor = 0;
   createCanvas(400, 400);
   bg = new Background(10);
+  createButton("Start").mousePressed();
+  mic = new p5.AudioIn()
+  mic.start();
+  
   drawHead();
   drawEyes();
   drawPupils(1);
@@ -36,45 +39,45 @@ function setup() {
 function draw() {
 
  background(165, 207, 201);
- 
+
 drawShadow();
-  
+
   bg.drawBack(100);
-  
+
   noseColor = (noseColor+.1)%360;
   drawNose();
-  
+
 if (mouseX<200){
 reSize = (mouseX + 100)/100;
-}  
-  
+}
+
 else {
 
 reSize = (5-(mouseX/100));
-  
+
 }
-  
+
  micLevel= mic.getLevel()* 300;
- drawHead();  
-  
+ drawHead();
+
  // positionTable = bg.generateRandom(10);
-  
+
   drawEyes();
   drawPupils(reSize);
   drawShine(reSize);
 
      drawNose();
   translate(p5.Vector.fromAngle(micLevel, 5));
-  
- 
-   
+
+
+
   drawMouth();
-  
+
   push();
   translate(p5.Vector.fromAngle(radians(micLevel*1000), 2));
   drawTongue();
   pop();
-  
+
 
 }
 
@@ -90,9 +93,9 @@ fill(168, 114);
 arc(280, 130, 40, 40, PI, QUARTER_PI);
 fill(247, 167);
 arc( 120, 130, 40, 40, HALF_PI, QUARTER_PI+HALF_PI+PI);
-  
+
 }
-  
+
 function drawEyes(){
 strokeWeight(0);
 fill(255);
@@ -124,7 +127,7 @@ fill(102, 7, 15);
 ellipse(190, 225, 4, 5);
 ellipse(210, 225, 4, 5);
 }
-  
+
 function drawMouth(){
 fill("#302030");
 circle(185, 260, 50);
@@ -134,10 +137,10 @@ circle(215, 260, 50);
 function drawTongue(){
 fill(145, 7, 7);
 ellipse(200, 270, 30, 15);
-  
+
 }
 
 function drawShadow(){
 fill(155, 193, 188);
-rect(200, 0, 200, 400);  
+rect(200, 0, 200, 400);
 }
