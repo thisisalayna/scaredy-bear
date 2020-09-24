@@ -9,9 +9,7 @@ let sketchStarted  = false;
 function setup() {
   x = 1;
   changeDirection = false;
-  createButton("Start").mousePressed(startSketch());
-  mic = new p5.AudioIn()
-  mic.start();
+  createButton("Start").mousePressed(startSketch);
   noseColor = 0;
   createCanvas(400, 400);
   bg = new Background(10);
