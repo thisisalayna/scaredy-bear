@@ -34,13 +34,15 @@ function setup() {
 function startSketch(){
 mic = new p5.AudioIn();
 mic.start();
+
+sketchStarted = true;
 }
 
 
 
 function draw() {
 
-  if (sketchStarted = true;) {
+  if (sketchStarted) {
 background(165, 207, 201);
 
   drawShadow();
