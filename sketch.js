@@ -1,3 +1,4 @@
+'use strict'
 var mic;
 let micLevel;
 let reSize;
@@ -5,6 +6,8 @@ let noseColor = 0;
 let bg;
 let randoms = [];
 let sketchStarted  = false;
+let x;
+let changeDirection;
 
 function setup() {
   x = 1;
