@@ -35,6 +35,7 @@ function setup() {
 function startSketch(){
 mic = new p5.AudioIn();
 mic.start();
+mic.stop();
 
 sketchStarted = true;
 }
